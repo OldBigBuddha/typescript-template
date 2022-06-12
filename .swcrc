@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json.schemastore.org/swcrc",
+  "test": ".*.test.ts$",
+  "exclude": [".*.js$", ".*.map$"],
+  "module": {
+    "type": "commonjs"
+  },
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false,
+      "decorators": false,
+      "dynamicImport": false
+    },
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"]
+    }
+  },
+  "sourceMaps": true
+}

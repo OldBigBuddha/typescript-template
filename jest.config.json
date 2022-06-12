@@ -1,0 +1,15 @@
+{
+  "testEnvironment": "node",
+  "maxWorkers": "50%",
+
+  "testMatch": ["**/*.test.ts"],
+  "testPathIgnorePatterns": ["<rootDir>/node_modules/"],
+
+  "transform": {
+    ".+\\.(t|j)sx?$": "@swc/jest"
+  },
+  "transformIgnorePatterns": ["/node_modules/"],
+
+  "collectCoverage": true,
+  "coverageDirectory": "./coverage/"
+}

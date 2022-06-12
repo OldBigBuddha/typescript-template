@@ -1,0 +1,43 @@
+{
+  "name": "typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "engines": {
+    "node": "v16.x"
+  },
+  "scripts": {
+    "build": "tsc -p ./tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "dev": "NODE_ENV=development ts-node -r tsconfig-paths/register src/main.ts",
+    "test": "tsc -p ./tsconfig.json --noEmit && NODE_ENV=test jest",
+    "lint": "eslint . --ext .ts && prettier --check --ignore-unknown **/*.ts"
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "lint-staged"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@swc/core": "1.2.198",
+    "@swc/jest": "0.2.21",
+    "@tsconfig/node16-strictest": "1.0.2",
+    "@types/jest": "28.1.1",
+    "@types/node": "16.11.10",
+    "@typescript-eslint/eslint-plugin": "5.27.1",
+    "@typescript-eslint/parser": "5.27.1",
+    "eslint": "8.17.0",
+    "eslint-config-prettier": "8.5.0",
+    "jest": "28.1.1",
+    "lint-staged": "13.0.1",
+    "prettier": "2.6.2",
+    "simple-git-hooks": "2.8.0",
+    "ts-node": "10.4.0",
+    "tsc-alias": "1.6.9",
+    "tsconfig-paths": "3.12.0",
+    "typescript": "4.5.2"
+  }
+}
